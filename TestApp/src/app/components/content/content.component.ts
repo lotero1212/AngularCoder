@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-
-  constructor() { }
+  arrayDeAlumnos: Array<string> = ["Harry", "Hermione", "Ron", "Draco", "Ginny", "Fred", "George"]
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
+
 
 }

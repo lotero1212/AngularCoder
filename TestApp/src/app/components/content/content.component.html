@@ -1,49 +1,17 @@
-<div class="container d-flex justify-content-between">
-  <div class="bgcard card" style="width: 40rem">
-    <img
-      src="assets/Nick-Warren-2019.jpg"
-      class="card-img-top"
-      alt="NICK VIEJO VIOLIN"
-    />
-    <div class="card-body">
-      <h1>Biografía</h1>
-      <p class="card-text">
-        Nick Warren comienza su carrera en 1987,3​ especializándose en el reggae
-        y la música independiente. A inicios de 1990, ya se había convertido en
-        uno de los disc jockeys más importantes de Brístol,4​ gracias a que
-        fungió como telonero de Massive Attack. A mediados de ese mismo año,
-        comenzó su residencia en el centro nocturno Cream de Liverpool.5​ En
-        1994, mientras era empleado de una tienda de discos, Warren conoció al
-        productor Jody Wisternoff, con quien decidió trabajar conjuntamente.6​
-        La primera producción del dueto fue la canción Paradise is the Sound,
-        que se presentó bajo el nombre artístico «Sub-Versión 3». Los dos
-        siguientes lanzamientos fueron emitidos bajo el nombre artístico «Echo».
-        Posteriormente, en 1997, el grupo dio a conocer su álbum primicia, Way
-        Out West, del que tomó su actual nombre.7​ Paralelamente a su
-        participación en Way Out West, Nick ha trabajado de forma independiente,
-        como lo hacen constar los sencillos In Search of Silver y Buenos Aires
-        —dados a conocer en 2010 y 2011,8​ respectivamente—, así como el
-        Psychedelic Wheel Mix hecho al sencillo Naive, de Tom Glass,9​ y el
-        lanzamiento de su programa radiofónico Sound Garden por Frisky Radio.
-      </p>
-    </div>
-  </div>
+<div
+  class="container d-flex justify-content-between"
+  *ngIf="arrayDeAlumnos.length > 0"
+>
+  <ul class="list-group">
+    <li *ngFor="let alumno of arrayDeAlumnos" class="list-group-item">
+      {{ alumno | lowercase }}
+    </li>
+  </ul>
+</div>
 
-  <div class="bgcard card" style="width: 40rem">
-    <img
-      src="assets/Nick-Warren-4.jpg"
-      class="card-img-top"
-      alt="NICK VIEJO VIOLIN"
-    />
-    <div class="card-body">
-      <h1>Próximos conciertos</h1>
-      <p class="card-text">
-        <li>mar 19 Cipolletti, Argentina Finca La Nonnina</li>
-        <li>abr 2 Austin, TX, US The Concourse Project</li>
-        <li>may 6 Chicago, IL, US Sound Bar</li>
-        <li>may 22 AL AIRE LIBRE Tempe, AZ, US Shady Park</li>
-        <li>ago 13Arrow right icon Amsterdam, Netherlands Loveland Festival</li>
-      </p>
-    </div>
-  </div>
+<div
+  class="container d-flex justify-content-between"
+  *ngIf="arrayDeAlumnos.length <= 0"
+>
+  <span [ngClass]="'alert alert-danger'"> NO HAY ALUMNOS REGISTRADOS</span>
 </div>
