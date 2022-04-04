@@ -71,12 +71,25 @@
     </button>
   </form>
 </div>
+<hr />
 
-<div class="container row">
-  <h4>Listado de alumnos</h4>
-  <ul class="list-group">
-    <li *ngFor="let a of listaAlumnos">
-      <!-- {{ a.nombre }} {{ a.apellido }} {{ a.email }} -->
-    </li>
-  </ul>
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <h4>Listado de Alumnos</h4>
+      <tr>
+        <th scope="col">Alumno</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr scope="row" *ngFor="let a of listaAlumnos">
+        {{
+          a.nombre
+        }}
+        {{
+          a.apellido
+        }}
+      </tr>
+    </tbody>
+  </table>
 </div>
